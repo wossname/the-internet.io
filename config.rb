@@ -58,3 +58,6 @@ activate :cloudfront do |cf|
   cf.distribution_id = 'E3Q548LP7Q7OZW'
   cf.filter = /\.(html|xml)$/
 end
+
+caching_policy 'text/html', max_age: 0, must_revalidate: true
+default_caching_policy max_age: (60 * 60 * 24 * 365)
