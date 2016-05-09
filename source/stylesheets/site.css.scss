@@ -1,2 +1,14 @@
 @charset "utf-8";
-@import "normalize";
+@import "//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin";
+
+@import '../assets/plugins/bootstrap/css/bootstrap.min.css';
+@import '../assets/css/style.css';
+@import '../assets/css/headers/header-default.css';
+@import '../assets/css/footers/footer-v1.css';
+@import '../assets/plugins/animate.css';
+@import '../assets/plugins/line-icons/line-icons.css';
+@import '../assets/plugins/font-awesome/css/font-awesome.min.css';
+@import '../assets/plugins/layer-slider/layerslider/css/layerslider.css';
+@import '../assets/css/theme-colors/red.css';
+@import '../assets/css/theme-skins/dark.css';
+@import '../assets/css/custom.css';
