@@ -7,3 +7,4 @@ deploy:
   bucket: the-internet.io
   local-dir: build
   acl: public_read
+  skip_cleanup: true
