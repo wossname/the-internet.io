@@ -1,8 +1,4 @@
-task default: :deploy
-
-task deploy: :build do
-  sh 'echo figure out deploying.'
-end
+task default: :build
 
 task :build do
   sh 'bundle exec middleman build'
