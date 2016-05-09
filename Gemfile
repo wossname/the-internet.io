@@ -15,3 +15,6 @@ gem 'middleman-compass', '>= 4.0.0'
 
 # Rake for automating the build and deploy
 gem 'rake'
+
+# Deployment
+gem 'middleman-cloudfront', github: 'andrusha/middleman-cloudfront'

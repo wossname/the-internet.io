@@ -44,3 +44,10 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+activate :cloudfront do |cf|
+  cf.access_key_id = ENV['AWS_ACCESS_KEY_ID']
+  cf.secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
+  cf.distribution_id = 'E3Q548LP7Q7OZW'
+  cf.filter = /\.html$/
+end
