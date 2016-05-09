@@ -5,5 +5,6 @@ task :build do
 end
 
 task deploy: :build do
+  sh 'bundle exec middleman sync'
   sh 'bundle exec middleman invalidate'
 end
