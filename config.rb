@@ -19,6 +19,7 @@ page '/*.txt', layout: false
 # General configuration
 activate :directory_indexes
 activate :asset_hash, ignore: [ '**/fullwidth/skin.css', '**/layerslider/css/blank.gif' ]
+activate :gzip
 
 # Reload the browser automatically whenever files change
 configure :development do
