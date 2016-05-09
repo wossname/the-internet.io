@@ -1,6 +1,7 @@
 language: ruby
 cache:
-  bundler: trub
+  bundler: true
+  apt: true
   directories:
     - build
 deploy:
