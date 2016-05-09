@@ -1,4 +1,8 @@
 language: ruby
+cache:
+  bundler: trub
+  directories:
+    - build
 deploy:
   provider: s3
   access_key_id: AKIAIA64INPHWFYVNYWA
