@@ -3,10 +3,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 md-margin-bottom-40">
-          <a href="/"><img id="logo-footer" class="footer-logo" src="<%= image_path('logo.png') %>">
+          <% utm_link_to 'https://woss.name/', content: 'footer logo' do %>
+            <img id="logo-footer" class="footer-logo" src="<%= image_path('logo.png') %>">
+          <% end %>
           <p>
             A Sneak Peek at The Internet is a project of
-            <a href="https://woss.name/">Wossname Industries</a>.
+            <%= utm_link_to 'Wossname Industries', 'http://woss.name/' %>.
             We’re exploring tools &amp; technologies that will allow people to
             measure, manage &amp; improve their mental wellbeing. We’re
             performing experiments that allow us to better understand ourselves

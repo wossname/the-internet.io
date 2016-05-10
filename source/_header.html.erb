@@ -1,10 +1,8 @@
 <div class="header header-sticky">
   <div class="container">
-    <!-- Logo -->
-    <a class="logo" href="/">
-      <img src="<%= image_path('logo.png') %>" alt="Logo">
-    </a>
-    <!-- End Logo -->
+    <% utm_link_to 'https://woss.name/', content: 'header logo', class: 'logo' do %>
+      <img id="logo-header" class="header-logo" src="<%= image_path('logo.png') %>" alt="Wossname Industries">
+    <% end %>
 
     <%= partial 'topbar.html' %>
 

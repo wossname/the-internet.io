@@ -40,7 +40,17 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  def utm_link_to(title, url, options = {})
+  def utm_link_to(title_or_url, url_or_options = nil, options = {}, &block)
+    if block_given?
+      title   = nil
+      url     = title_or_url
+      options = url_or_options || {}
+    else
+      title   = title_or_url
+      url     = url_or_options
+      options = options
+    end
+
     utm_source   = options.delete(:source) || config[:default_utm_source]
     utm_medium   = options.delete(:medium) || config[:default_utm_medium]
     utm_campaign = options.delete(:campaign) || config[:default_utm_campaign]
@@ -51,9 +61,15 @@ helpers do
       utm_medium: utm_medium,
       utm_campaign: utm_campaign,
       utm_content: utm_content
-    }.merge(options.delete(:query) || {})
+    }.merge(options.delete(:query) || {}).reject { |k, v| v.nil? }
 
-    link_to title, url, { query: query }.merge(options)
+    options = { query: query }.merge(options)
+
+    if block_given?
+      link_to url, options, &block
+    else
+      link_to title, url, options
+    end
   end
 end
 
