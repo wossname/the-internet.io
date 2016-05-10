@@ -61,10 +61,12 @@
           </p>
 
           <ul class="list-unstyled link-list">
-            <li><a href="https://howicode.com/">How I Code</a><i class="fa fa-angle-right"></i></li>
-            <li><a href="https://rock-climbing.club/">Rock Climbing Club</a><i class="fa fa-angle-right"></i></li>
-            <li><a href="https://www.rubyonrails.co.uk/">Ruby on Rails Consulting</a><i class="fa fa-angle-right"></i></li>
-            <li><a href="https://mathieson.name/">The Mathieson Family</a><i class="fa fa-angle-right"></i></li>
+            <% data.other_projects.each do |id, project| %>
+              <li>
+                <%= utm_link_to project.title, project.url %>
+                <i class="fa fa-angle-right"></i>
+              </li>
+            <% end %>
           </ul>
         </div>
 

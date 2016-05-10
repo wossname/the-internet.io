@@ -2,6 +2,14 @@
 # Page options, layouts, aliases and proxies
 ###
 
+config[:hostname] = 'the-internet.io'
+config[:url] = "https://#{config[:hostname]}/"
+
+# UTM-related bits
+config[:default_utm_source] = config[:hostname]
+config[:default_utm_medium] = 'website'
+config[:default_utm_campaign] = 'Other Projects'
+
 # Per-page layout changes:
 #
 # With no layout
@@ -31,11 +39,23 @@ end
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def utm_link_to(title, url, options = {})
+    utm_source   = options.delete(:source) || config[:default_utm_source]
+    utm_medium   = options.delete(:medium) || config[:default_utm_medium]
+    utm_campaign = options.delete(:campaign) || config[:default_utm_campaign]
+    utm_content  = options.delete(:content) || title
+
+    query = {
+      utm_source: utm_source,
+      utm_medium: utm_medium,
+      utm_campaign: utm_campaign,
+      utm_content: utm_content
+    }.merge(options.delete(:query) || {})
+
+    link_to title, url, { query: query }.merge(options)
+  end
+end
 
 # Build-specific configuration
 configure :build do
