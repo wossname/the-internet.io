@@ -1,0 +1,18 @@
+connectedness:
+  title: On the Connectedness of Apps &amp; Services
+  date: Friday, 29 April 2016
+  url: https://blog.woss.name/on-the-connectedness-of-apps-services-33ace526d20e
+  image: https://cdn-images-1.medium.com/max/600/1*YzDYSavGALu1o_wa23k7jA.png
+  description: |
+    I use many apps & services in my everyday life. They all connect to one
+    another, but I forget how. How would I model & visualise this web?
+trees_in_postgresql:
+  title: Representing Trees in PostgreSQL
+  date: Friday, 22 April 2016
+  url: https://medium.com/notes-from-a-messy-desk/representing-trees-in-postgresql-cbcdae419022
+  image: nature-forest-trees-bamboo.jpeg
+  description: |
+    Trees are a very useful data structure for modelling real world entities.
+    The trouble with hierarchical data like this is that it doesn’t fit
+    terribly well into our traditional relational data model, where we’re
+    operating over a set of data which matches some particular constraint.
