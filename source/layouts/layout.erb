@@ -33,7 +33,11 @@
   <body class="header-fixed boxed-layout container <%= page_classes %>">
 
     <div class="wrapper">
+      <%= partial 'header' %>
+
       <%= yield %>
+
+      <%= partial 'footer' %>
     </div>
 
     <!-- JS Global Compulsory -->

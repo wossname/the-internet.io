@@ -2,16 +2,9 @@
 title: A Sneak Peek at The Internet
 ---
 <% content_for :navbar do %>
-  <li><%= link_to 'Home',          '/' %></li>
-  <li><%= link_to 'About',         '', fragment: 'about' %></li>
-  <li><%= link_to 'Outline',       '', fragment: 'outline' %></li>
-  <li><%= link_to 'Mailing List',  '', fragment: 'mailing-list' %></li>
-  <li><%= link_to 'Articles',      '', fragment: 'articles' %></li>
-  <li><%= link_to 'Presentations', '', fragment: 'presentations' %></li>
-  <li><%= link_to 'Contact Me',    '', fragment: 'contact' %></li>
+  <li><%= link_to 'Home', '/' %></li>
 <% end %>
 
-<%= partial 'header' %>
 <%= partial 'slides' %>
 
 <div class="container content">
@@ -22,5 +15,3 @@ title: A Sneak Peek at The Internet
   <%= partial 'presentations' %>
   <%= partial 'contact' %>
 </div>
-
-<%= partial 'footer' %>
