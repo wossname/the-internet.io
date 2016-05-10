@@ -1,0 +1,45 @@
+oscon_2015:
+  title: 'Type "google.com" into your Browser: What Happens Next?'
+  url: https://github.com/mathie/the-internet/blob/master/presentation.md
+  image: how-the-internet-works.png
+  date: Wednesday, 22 July 2015
+  location: O'Reilly Open Source Convention 2015, Portland, OR
+  slides: http://www.slideshare.net/mathie/type-googlecom-into-the-browser-and-hit-enter-what-happens-next
+  description: |
+    <p>
+      I haven’t done any interviewing for a while but I went through a
+      period of growth in one of the companies I worked for where we were
+      feverishly expanding the development team, so we had to be a little
+      more systematic in our approach to interviewing. Instead of just
+      having an open conversation with candidates to see where it led
+      (which is what I’d previously done in such situations), I wound up
+      preparing a ‘standard’ set of questions. It took a few goes, but
+      eventually I settled on a favourite question for the technical
+      portion of the interview:
+    </p>
+
+    <blockquote>
+      <p>
+        When I pull up my favourite Internet browser, type “google.com”
+        into the address bar, and press return, what happens?
+      </p>
+    </blockquote>
+
+    <p>
+      I reckon it’s a doozy of a technical question. There’s so much
+      breadth and depth in that answer. Let's dig into it a bit
+      more&hellip;
+    </p>
+bathruby_2015:
+  title: Resolving Names
+  url: https://youtu.be/3ifeFIiOacA?t=13m18s
+  image: resolving-names.001.jpeg
+  date: Friday, 13 March 2015
+  location: Bath Ruby Conference 2015, Bath, UK
+  slides: http://www.slideshare.net/mathie/resolving-names
+  description: |
+    <p>
+      I gave a lightning talk at the Bath Ruby Conference on how domain names
+      are resolved. Trying to pack 100ms of network chatter into 5 minutes
+      proved tricky!
+    </p>
