@@ -3,6 +3,7 @@
 ###
 
 config[:hostname] = 'the-internet.io'
+config[:email_address] = "hello@#{config[:hostname]}"
 config[:url] = "https://#{config[:hostname]}/"
 
 # UTM-related bits
@@ -40,6 +41,10 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
+  def mail_to_link(options = {})
+    mail_to config[:email_address], config[:email_address], options
+  end
+
   def utm_link_to(title_or_url, url_or_options = nil, options = {}, &block)
     if block_given?
       title   = nil
