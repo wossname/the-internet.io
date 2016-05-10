@@ -1,47 +1,7 @@
-<div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
-    <div class="container">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="/">
-            Home
-          </a>
-        </li>
-
-        <li>
-          <a href="#about">
-            About
-          </a>
-        </li>
-
-        <li>
-          <a href="#outline">
-            Outline
-          </a>
-        </li>
-
-        <li>
-          <a href="#mailing-list">
-            Mailing List
-          </a>
-        </li>
-
-        <li>
-          <a href="#articles">
-            Articles
-          </a>
-        </li>
-
-        <li>
-          <a href="#presentations">
-            Presentations
-          </a>
-        </li>
-
-        <li>
-          <a href="#contact">
-            Contact Me
-          </a>
-        </li>
-      </ul>
-    </div>
+<% if content_for?(:navbar) %>
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <%= yield_content :navbar %>
+    </ul>
   </div>
+<% end %>
