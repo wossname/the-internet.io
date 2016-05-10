@@ -1,0 +1,55 @@
+---
+title: Oh, no, something went wrong!
+---
+<% content_for :navbar do %>
+  <li><%= link_to 'Home', '/' %></li>
+<% end %>
+
+<div class="container content">
+  <section id="error" style="padding-top:70px" class="row">
+    <div class="col-md-8 col-md-offset-1">
+      <div class="headline">
+        <h2>Well, this is embarrassing&hellip;</h2>
+      </div>
+
+      <p class="lead">
+        Err, sorry about this, but something seems to have gone horribly wrong
+        somewhere along the way, and you're seeing me, the humble error page.
+        It's possible you've followed a link to somwhere on the site that
+        doesn't exist, or that I've messed up the site again.
+      </p>
+
+      <p class="lead">
+        How about we work together to try and fix the problem? Here are a
+        couple of things you can do:
+      </p>
+
+      <ul>
+        <li>
+          <p class="lead">
+            visit the <%= link_to 'home page', '/' %> and see if it has the
+            content you're looking for;
+          </p>
+        </li>
+        <li>
+          <p class="lead">
+            chat with me, by clicking on the chat bubble down at the bottom right
+            hand corner; or
+          </p>
+        </li>
+        <li>
+          <p class="lead">
+            Shout at <%= link_to '@mathie', 'https://twitter.com/mathie' %> on
+            Twitter and tell him to fix it!
+          </p>
+        </li>
+      </ul>
+
+      <p class="lead">
+        Meanwhile, the error has been logged, and I get a notification about
+        it, so chances are good that I'll take a look into it, too, sometime
+        soon.
+      </p>
+    </div>
+  </section>
+</div>
