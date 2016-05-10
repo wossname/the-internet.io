@@ -35,20 +35,15 @@
             </p>
 
             <ul class="list-unstyled latest-list">
-              <li>
-                <h3><a href="https://blog.woss.name/finding-your-muse-354b74ed915a">Finding your Muse</a></h3>
-                <small>Thursday, 5 May 2016</small>
-                <p>
-                  I bought Muse &ndash; the brain sensing headband &ndash; a couple of months ago, and I've been using it to help develop a meditation habit. It's neat!
-                </p>
-              </li>
-              <li>
-                <h3><a href="https://blog.woss.name/exporting-your-data-from-healthkit-fc289360d337">Exporting your data from HealthKit</a></h3>
-                <small>Friday, 29 April 2016</small>
-                <p>
-                  I made a discovery this morning: as a regular user, not a ninja iOS app developer, you can export all your data from HealthKit!
-                </p>
-              </li>
+              <% data.all_posts.each do |id, post| %>
+                <li>
+                  <h3><%= link_to post.title, post.url %></h3>
+                  <small><%= post.date %></small>
+                  <p>
+                    <%= post.description %>
+                  </p>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>
