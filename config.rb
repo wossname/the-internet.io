@@ -4,7 +4,7 @@
 
 config[:hostname] = 'the-internet.io'
 config[:email_address] = "hello@#{config[:hostname]}"
-config[:url] = "https://#{config[:hostname]}/"
+config[:url] = "https://#{config[:hostname]}"
 
 # UTM-related bits
 config[:default_utm_source] = config[:hostname]
