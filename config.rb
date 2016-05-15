@@ -5,6 +5,7 @@
 config[:hostname] = 'the-internet.io'
 config[:email_address] = "hello@#{config[:hostname]}"
 config[:url] = "https://#{config[:hostname]}"
+config[:fb_app_id] = '228776137514306'
 
 # UTM-related bits
 config[:default_utm_source] = config[:hostname]
